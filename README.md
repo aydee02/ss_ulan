@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ss_ulan</title>
+
+  <!-- Шрифт Orbitron -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Иконки соцсетей -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0e0e0e;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      position: relative;
+      width: 100%;
+      height: 56.25vw; /* 16:9 */
+      overflow: hidden;
+    }
+
+    header video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .avatar-container {
+      margin-top: -80px;
+      position: relative;
+      z-index: 2;
+      animation: slideIn 1.5s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .avatar-container img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 20px #00f0ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .avatar-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #00ffff;
+    }
+
+    .name {
+      margin-top: 10px;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .name:hover {
+      color: #00f0ff;
+      text-shadow: 0 0 10px #00f0ff;
+    }
+
+    .quote {
+  margin: 20px auto;
+  padding: 15px;
+  background: rgba(100, 100, 100, 0.15);
+  width: 80%;
+  max-width: 400px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 8px #00000033;
+  animation: fadeIn 2s ease 1s forwards;
+  opacity: 0;
+    }
+    .card {
+  margin: 20px auto;
+  padding: 15px;
+  background: rgba(120, 120, 120, 0.12);
+  width: 80%;
+  max-width: 400px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 6px #00000022;
+  color: #eee;
+  animation: fadeIn 2s ease 1.2s forwards;
+  opacity: 0;
+  text-align: center;
+}
+
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 30px 10px;
+      background: #1a1a1a;
+    }
+
+    .socials a {
+      color: white;
+      font-size: 26px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #00ffff;
+      transform: scale(1.2);
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body onclick="document.getElementById('bg-music').play()">
+
+  <!-- Видео фон -->
+  <header>
+    <video src="видео фон.mp4" autoplay muted loop></video>
+  </header>
+
+  <!-- Аватарка + имя -->
+  <div class="avatar-container">
+    <img src="фото.jpg" alt="Аватарка">
+    <div class="name">ulankx</div>
+  </div>
+
+  <!-- Цитата -->
+  <div class="quote">i love being alone</div>
+  <div class="card">
+  <h3>KASPI</h3>
+  <p>4400 4302 4916 7435</p>
+</div>
+
+  <!-- Соцсети -->
+  <div class="socials">
+    <a href="https://vk.com/ss_ulan" target="_blank"><i class="fab fa-vk"></i></a>
+    <a href="https://t.me/s0ulful1" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://www.tiktok.com/ulanff06" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@ulan444ff?si=iiyUnHhMXoV83PQz" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://discord.gg/bxB7azXvXk" target="_blank"><i class="fab fa-discord"></i></a>
+  </div>
+
+  <!-- Музыка -->
+  <audio id="bg-music" src="музыка.mp3"></audio>
+
+</body>
+</html>
